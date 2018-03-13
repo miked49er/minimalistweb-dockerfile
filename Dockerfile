@@ -31,5 +31,4 @@ RUN npm install -g grunt-cli \
     grunt-contrib-watch \
     grunt-http-server
 
-CMD /bin/ln -s $dev/node_modules $project/node_modules
-CMD /bin/sh -c cd $project/ && npm run dev
+CMD /bin/sh -c "ln -s $dev/node_modules $project/node_modules && cd $project/ && npm run dev"
