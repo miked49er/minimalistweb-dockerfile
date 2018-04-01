@@ -18,8 +18,9 @@ RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
   && apt-get install -y nodejs
 
 # Install sass and compass
-RUN gem install sass --no-user-install \
-  && gem install compass
+RUN gem install sass -v 3.4 --no-user-install \
+  && gem install compass \
+  && gem install susy
 
 # Install required node modules
 RUN npm install -g grunt-cli \
